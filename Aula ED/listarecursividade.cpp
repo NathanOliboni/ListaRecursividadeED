@@ -259,9 +259,12 @@ int questao11()
     cout << "O numero " << n << " na sequencia de padovan e: " << padovan(n - 1) << endl;
 }
 
-int fatQuad(int n)
-{
-    cout << "Em construcao....." << endl;
+int fatorial(int n){
+    if(n == 0){
+        return 1;
+    }else{
+        return n * fatorial(n - 1);
+    }
 }
 
 int questao12()
@@ -269,7 +272,7 @@ int questao12()
     int n;
     cout << "Informe um numero: " << endl;
     cin >> n;
-    cout << "O numero fatorial quadruplo de " << n << "  e: " << fatQuad(n) << endl;
+    cout << "O numero fatorial quadruplo de " << n << "  e: " << fatorial (2*n)/fatorial(n)  << endl;
 }
 
 int main()
